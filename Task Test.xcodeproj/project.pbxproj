@@ -7,24 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E004EB7297BF9E700BCCF65 /* SideMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E004EB6297BF9E700BCCF65 /* SideMenuController.swift */; };
+		4E004EB9297BFA1200BCCF65 /* SideMenu.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E004EB8297BFA1200BCCF65 /* SideMenu.storyboard */; };
+		4E171EC1297B4B52004FD1D0 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E171EC0297B4B52004FD1D0 /* LoginViewController.swift */; };
+		4E171EC3297B4B6C004FD1D0 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E171EC2297B4B6C004FD1D0 /* Login.storyboard */; };
 		4E63FCE1297B0E37005075A5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63FCE0297B0E37005075A5 /* File.swift */; };
-		4E63FCE3297B16A7005075A5 /* LanguageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E63FCE2297B16A7005075A5 /* LanguageViewController.swift */; };
 		4E64EB61297AB5FA006F8621 /* onboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E64EB60297AB5FA006F8621 /* onboardingCollectionViewCell.swift */; };
 		4E9BF7FD2979F3C500C69A93 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BF7FC2979F3C500C69A93 /* AppDelegate.swift */; };
 		4E9BF7FF2979F3C500C69A93 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9BF7FE2979F3C500C69A93 /* SceneDelegate.swift */; };
 		4E9BF8042979F3C500C69A93 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9BF8022979F3C500C69A93 /* Main.storyboard */; };
 		4E9BF8062979F3C900C69A93 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E9BF8052979F3C900C69A93 /* Assets.xcassets */; };
 		4E9BF8092979F3C900C69A93 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E9BF8072979F3C900C69A93 /* LaunchScreen.storyboard */; };
+		4EE0B812297C6100005E4482 /* Homecollectione.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE0B811297C6100005E4482 /* Homecollectione.swift */; };
+		4EE0B815297C64F4005E4482 /* photosCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE0B814297C64F4005E4482 /* photosCollectionReusableView.swift */; };
 		4EF43AAE297A58B100184306 /* OnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF43AAD297A58B100184306 /* OnboardingVC.swift */; };
 		4EF43AB3297A5E7400184306 /* ExstentioneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF43AB2297A5E7400184306 /* ExstentioneView.swift */; };
 		4EF43AB5297A623000184306 /* OnbardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF43AB4297A623000184306 /* OnbardingModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E004EB6297BF9E700BCCF65 /* SideMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideMenuController.swift; sourceTree = "<group>"; };
+		4E004EB8297BFA1200BCCF65 /* SideMenu.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideMenu.storyboard; sourceTree = "<group>"; };
+		4E171EC0297B4B52004FD1D0 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../Model/LoginViewController.swift; sourceTree = "<group>"; };
+		4E171EC2297B4B6C004FD1D0 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		4E171EC4297B4E4D004FD1D0 /* Sofia Pro Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Sofia Pro Bold.ttf"; path = "Task Test/Font/Sofia Pro Bold.ttf"; sourceTree = SOURCE_ROOT; };
 		4E63FCE0297B0E37005075A5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
-		4E63FCE2297B16A7005075A5 /* LanguageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageViewController.swift; sourceTree = "<group>"; };
 		4E64EB60297AB5FA006F8621 /* onboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingCollectionViewCell.swift; sourceTree = "<group>"; };
-		4E64EB65297ACBBE006F8621 /* sofiapro-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "sofiapro-light.otf"; path = "sofiapro/Fonts/sofiapro-light.otf"; sourceTree = SOURCE_ROOT; };
+		4E64EB65297ACBBE006F8621 /* sofiapro-light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "sofiapro-light.otf"; path = "Task Test/Font/sofiapro-light.otf"; sourceTree = SOURCE_ROOT; };
 		4E9BF7F92979F3C500C69A93 /* Task Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Task Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E9BF7FC2979F3C500C69A93 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E9BF7FE2979F3C500C69A93 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +41,8 @@
 		4E9BF8052979F3C900C69A93 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4E9BF8082979F3C900C69A93 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4E9BF80A2979F3C900C69A93 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EE0B811297C6100005E4482 /* Homecollectione.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homecollectione.swift; sourceTree = "<group>"; };
+		4EE0B814297C64F4005E4482 /* photosCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = photosCollectionReusableView.swift; sourceTree = "<group>"; };
 		4EF43AAD297A58B100184306 /* OnboardingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingVC.swift; sourceTree = "<group>"; };
 		4EF43AB2297A5E7400184306 /* ExstentioneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExstentioneView.swift; sourceTree = "<group>"; };
 		4EF43AB4297A623000184306 /* OnbardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnbardingModel.swift; sourceTree = "<group>"; };
@@ -48,12 +59,56 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4E004EB2297BF8F800BCCF65 /* Side menu */ = {
+			isa = PBXGroup;
+			children = (
+				4E004EB5297BF95700BCCF65 /* Controller */,
+				4E004EB4297BF95300BCCF65 /* View */,
+				4E004EB3297BF94F00BCCF65 /* Model */,
+			);
+			path = "Side menu";
+			sourceTree = "<group>";
+		};
+		4E004EB3297BF94F00BCCF65 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E004EB4297BF95300BCCF65 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E004EB8297BFA1200BCCF65 /* SideMenu.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E004EB5297BF95700BCCF65 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E004EB6297BF9E700BCCF65 /* SideMenuController.swift */,
+				4EE0B813297C610B005E4482 /* cell */,
+			);
+			name = Controller;
+			path = ../Controller;
+			sourceTree = "<group>";
+		};
+		4E171EC5297B4E56004FD1D0 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				4E64EB65297ACBBE006F8621 /* sofiapro-light.otf */,
+				4E171EC4297B4E4D004FD1D0 /* Sofia Pro Bold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		4E63FCE4297B2973005075A5 /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				4E63FCE5297B29C2005075A5 /* Controller */,
-				4E63FCE9297B2A63005075A5 /* Model */,
 				4E63FCE8297B2A41005075A5 /* View */,
+				4E63FCE9297B2A63005075A5 /* Model */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -61,7 +116,7 @@
 		4E63FCE5297B29C2005075A5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4E63FCE2297B16A7005075A5 /* LanguageViewController.swift */,
+				4E171EC0297B4B52004FD1D0 /* LoginViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -69,6 +124,7 @@
 		4E63FCE8297B2A41005075A5 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				4E171EC2297B4B6C004FD1D0 /* Login.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -86,14 +142,6 @@
 				4E64EB60297AB5FA006F8621 /* onboardingCollectionViewCell.swift */,
 			);
 			path = cell;
-			sourceTree = "<group>";
-		};
-		4E64EB62297ACB76006F8621 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				4E64EB65297ACBBE006F8621 /* sofiapro-light.otf */,
-			);
-			path = Fonts;
 			sourceTree = "<group>";
 		};
 		4E9BF7F02979F3C500C69A93 = {
@@ -115,7 +163,7 @@
 		4E9BF7FB2979F3C500C69A93 /* Task Test */ = {
 			isa = PBXGroup;
 			children = (
-				4E64EB62297ACB76006F8621 /* Fonts */,
+				4E171EC5297B4E56004FD1D0 /* Font */,
 				4EF43AAF297A5D8B00184306 /* Extentione */,
 				4EF43AA7297A568100184306 /* Resources */,
 				4EF43AA6297A566D00184306 /* Startup */,
@@ -123,6 +171,15 @@
 				4E9BF80A2979F3C900C69A93 /* Info.plist */,
 			);
 			path = "Task Test";
+			sourceTree = "<group>";
+		};
+		4EE0B813297C610B005E4482 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				4EE0B811297C6100005E4482 /* Homecollectione.swift */,
+				4EE0B814297C64F4005E4482 /* photosCollectionReusableView.swift */,
+			);
+			path = cell;
 			sourceTree = "<group>";
 		};
 		4EF43AA6297A566D00184306 /* Startup */ = {
@@ -146,6 +203,7 @@
 		4EF43AA8297A56A900184306 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				4E004EB2297BF8F800BCCF65 /* Side menu */,
 				4E63FCE4297B2973005075A5 /* Login */,
 				4EF43AA9297A56F500184306 /* onboarding */,
 			);
@@ -255,6 +313,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E9BF8092979F3C900C69A93 /* LaunchScreen.storyboard in Resources */,
+				4E004EB9297BFA1200BCCF65 /* SideMenu.storyboard in Resources */,
+				4E171EC3297B4B6C004FD1D0 /* Login.storyboard in Resources */,
 				4E9BF8062979F3C900C69A93 /* Assets.xcassets in Resources */,
 				4E9BF8042979F3C500C69A93 /* Main.storyboard in Resources */,
 			);
@@ -267,11 +327,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EE0B812297C6100005E4482 /* Homecollectione.swift in Sources */,
+				4EE0B815297C64F4005E4482 /* photosCollectionReusableView.swift in Sources */,
 				4EF43AAE297A58B100184306 /* OnboardingVC.swift in Sources */,
 				4EF43AB3297A5E7400184306 /* ExstentioneView.swift in Sources */,
-				4E63FCE3297B16A7005075A5 /* LanguageViewController.swift in Sources */,
 				4E63FCE1297B0E37005075A5 /* File.swift in Sources */,
 				4E9BF7FD2979F3C500C69A93 /* AppDelegate.swift in Sources */,
+				4E004EB7297BF9E700BCCF65 /* SideMenuController.swift in Sources */,
+				4E171EC1297B4B52004FD1D0 /* LoginViewController.swift in Sources */,
 				4EF43AB5297A623000184306 /* OnbardingModel.swift in Sources */,
 				4E9BF7FF2979F3C500C69A93 /* SceneDelegate.swift in Sources */,
 				4E64EB61297AB5FA006F8621 /* onboardingCollectionViewCell.swift in Sources */,

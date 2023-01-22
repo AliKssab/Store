@@ -25,7 +25,7 @@ class OnboardingVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        PageControler.numberOfPages = slides.count
+//        PageControler.numberOfPages = slides.count
 
 slides = [OnbardingModel(title: "Browse your menu and order directly", descriptione: "Our app can send you everywhere, even space. For only $2.99 per month" , image: UIImage(named: "imagman")! ),
           OnbardingModel(title: "Even to space with us! Together", descriptione: "Our app can send you everywhere, even space. For only $2.99 per month" , image: UIImage(named:"imageater")!) ,
@@ -37,18 +37,22 @@ slides = [OnbardingModel(title: "Browse your menu and order directly", descripti
     
     
     
+    
     @IBAction func nextButtonClick(_ sender: Any) {
         if currentPage == slides.count - 1 {
-//            let controler = storyboard?.instantiateViewController(withIdentifier: "LanguageViewController") as! LanguageViewController
-//            present(controler, animated: true , completion: nil)
-            print("ok")
+            let storyboard = UIStoryboard(name: "Login", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
+            vc.modalPresentationStyle = .currentContext
+            UserDefaults.standard.hasOnboarded = true
+            self.definesPresentationContext = true
+            present(vc, animated: true)
         } else {
+            
+        
             currentPage += 1
             let indexPath = IndexPath(item: currentPage, section: 0)
             CollectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
-        
-       
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
