@@ -17,7 +17,7 @@
         <!--OnboardingVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="OnboardingVC" customModule="Task_Test" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Maina" id="BYZ-38-t0r" customClass="OnboardingVC" customModule="Task_Test" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -108,9 +108,9 @@
                                     <constraint firstAttribute="height" constant="60" id="DfO-aY-W7K"/>
                                     <constraint firstAttribute="width" constant="60" id="NJl-eh-LoI"/>
                                     <constraint firstItem="ODb-LK-HAC" firstAttribute="leading" secondItem="TXb-di-m4K" secondAttribute="leading" id="YZh-dN-CKi"/>
-                                    <constraint firstItem="ODb-LK-HAC" firstAttribute="top" secondItem="TXb-di-m4K" secondAttribute="top" id="aee-1N-qCH"/>
                                     <constraint firstAttribute="bottom" secondItem="ODb-LK-HAC" secondAttribute="bottom" id="jTa-Cj-CUg"/>
                                     <constraint firstAttribute="trailing" secondItem="ODb-LK-HAC" secondAttribute="trailing" id="k7D-j4-alo"/>
+                                    <constraint firstItem="ODb-LK-HAC" firstAttribute="top" secondItem="TXb-di-m4K" secondAttribute="top" id="oBk-Vq-rmk"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -122,10 +122,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="TXb-di-m4K" firstAttribute="top" secondItem="Pp0-vP-P3B" secondAttribute="bottom" constant="40" id="1qS-NN-r1D"/>
                             <constraint firstItem="hcg-2C-Xtq" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" multiplier="1.1" id="3ql-3U-4qR"/>
                             <constraint firstItem="Pp0-vP-P3B" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="4fG-n2-fvj"/>
+                            <constraint firstItem="Pp0-vP-P3B" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.744131" id="K1K-uR-L4v"/>
                             <constraint firstItem="Pp0-vP-P3B" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KQR-B1-xeT"/>
+                            <constraint firstItem="Pp0-vP-P3B" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Kvy-1h-DDp"/>
                             <constraint firstItem="Pp0-vP-P3B" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="T4F-lZ-SKA"/>
                             <constraint firstAttribute="bottomMargin" secondItem="TXb-di-m4K" secondAttribute="bottom" constant="25" id="fuC-e0-YBY"/>
                             <constraint firstItem="hcg-2C-Xtq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hG6-I9-kwB"/>
