@@ -9,7 +9,8 @@ import Foundation
 struct URLs {
     
     static let login = "https://dummyjson.com/auth/login"
-    
+    static let products = "https://dummyjson.com/products"
+
     
    
 }

@@ -1,17 +1,12 @@
-//
-//  serves.swift
-//  Task Test
-//
-//  Created by Ali Wicca on 22/01/2023.
-//
+//      username  kminchelle
+//      password  0lelplR
 
 import UIKit
 import Alamofire
 class serves: NSObject {
     
     class func login(email : String , password : String , completion: (_ error : Error? , _ success: Bool)-> Void) {
-//      username  kminchelle
-//      password  0lelplR
+
         guard  let url = URL(string: URLs.login ) else {return}
         let parameter : [String:String] =
          ["username": email,
@@ -32,16 +27,20 @@ class serves: NSObject {
                     print("erre ")
                 }
             }
-        
-        
-        
-        
-        
-        
-        
-        
-        
+         
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     

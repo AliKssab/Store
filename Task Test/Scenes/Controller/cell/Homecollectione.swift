@@ -5,6 +5,10 @@
 //  Created by Ali Wicca on 21/01/2023.
 //
 
+
+//photos
+//label
+//Descrbtione
 import UIKit
 
 class Homecollectione: UICollectionViewCell {

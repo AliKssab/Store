@@ -11,26 +11,28 @@ class OnboardingVC: UIViewController , UICollectionViewDelegate , UICollectionVi
     var slides :[OnbardingModel] = []
     
     @IBOutlet weak var CollectionView: UICollectionView!
-    @IBOutlet weak var PageControler: UIPageControl!
+    @IBOutlet weak var Page: UIPageControl!
     @IBOutlet weak var Nexst: UIButton!
     var currentPage = 0 {
         didSet {
-            PageControler.currentPage = currentPage
-            if currentPage == slides .count - 1 {
+            Page.currentPage = currentPage
+            if currentPage == slides.count - 1 {
                 Nexst.setTitle("", for: .normal)
             } else {
-                Nexst .setTitle("", for: .normal)
+                Nexst.setTitle("", for: .normal)
             }
         }
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-//        PageControler.numberOfPages = slides.count
+        Page.numberOfPages = slides.count
 
-slides = [OnbardingModel(title: "Browse your menu and order directly", descriptione: "Our app can send you everywhere, even space. For only $2.99 per month" , image: UIImage(named: "imagman")! ),
-          OnbardingModel(title: "Even to space with us! Together", descriptione: "Our app can send you everywhere, even space. For only $2.99 per month" , image: UIImage(named:"imageater")!) ,
-          OnbardingModel(title: "Pickup delivery at your door", descriptione: "Our app can send you everywhere, even space. For only $2.99 per month" , image: UIImage(named: "imagDelivery")! )]
-
+        slides = [
+            OnbardingModel(title: "Browse your menu and order directly", descriptione: "Our app can send you everywhere, even space. For only $2.99 per month", image: #imageLiteral(resourceName: "imagman")),
+            OnbardingModel(title: "Even to space with us! Together", descriptione: "Our app can send you everywhere, even space. For only $2.99 per month", image: #imageLiteral(resourceName: "imageater")),
+            OnbardingModel(title: "Pickup delivery at your door", descriptione: "Our app can send you everywhere, even space. For only $2.99 per month", image: #imageLiteral(resourceName: "imagDelivery"))
+                 ]
+        Page.numberOfPages = slides.count
         CollectionView.delegate = self
         CollectionView.dataSource = self
     }
@@ -42,9 +44,9 @@ slides = [OnbardingModel(title: "Browse your menu and order directly", descripti
         if currentPage == slides.count - 1 {
             let storyboard = UIStoryboard(name: "Login", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "LoginViewController")
-            vc.modalPresentationStyle = .currentContext
+            vc.modalPresentationStyle = .fullScreen
+            vc.modalTransitionStyle = .flipHorizontal
             UserDefaults.standard.hasOnboarded = true
-            self.definesPresentationContext = true
             present(vc, animated: true)
         } else {
             
@@ -60,14 +62,17 @@ slides = [OnbardingModel(title: "Browse your menu and order directly", descripti
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "onboardingCollectionViewCell", for: indexPath) as! onboardingCollectionViewCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: onboardingCollectionViewCell.identifier, for: indexPath) as! onboardingCollectionViewCell
         cell.setup(slides[indexPath.row])
-        collectionView.reloadData()
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
     func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-            let width = scrollView.frame.width
-            currentPage = Int(scrollView.contentOffset.x / width)
-        PageControler.currentPage = currentPage
-        }
+        let width = scrollView.frame.width
+        currentPage = Int(scrollView.contentOffset.x / width)
+    }
 }

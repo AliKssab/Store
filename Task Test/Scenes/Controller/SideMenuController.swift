@@ -5,14 +5,19 @@
 //  Created by Ali Wicca on 21/01/2023.
 //
 
+
+//collectionView
+
 import UIKit
+import Alamofire
 
 class SideMenuController: UIViewController , UICollectionViewDelegate , UICollectionViewDataSource , UICollectionViewDelegateFlowLayout {
-
+    
+    
+    var arryproducts = [Product]()
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet var swipeGesture: UISwipeGestureRecognizer!
      @IBOutlet weak var containerView: UIView!
-    var arryphotos = [photo]()
      var menu = false
      let screen = UIScreen.main.bounds
      var home = CGAffineTransform()
@@ -20,16 +25,35 @@ class SideMenuController: UIViewController , UICollectionViewDelegate , UICollec
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        arryphotos.append(photo(name: "Found 30 results", photos: [UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!, UIImage(named: "imagDelivery")!]) )
+       
                           
         home = self.containerView.transform
         collectionView.dataSource = self
         collectionView.delegate = self
- 
+        gitdataHome()
     }
     
+    
+    
+    func gitdataHome()   {
+        guard  let url = URL(string: URLs.products ) else {return}
+        AF.request(url, method: .get)
+            .responseDecodable(of:ModelHome.self) { Response in
+                switch Response.result{
+                case .success(let array) :
+                    self.arryproducts = array.products
+                    print ("aaaaaaa\(array)")
+                    DispatchQueue.main.async {
+                        self.collectionView.reloadData()
+                    }
+                case .failure(let errer):
+                    print(errer)
+            }
+        }
+    }
+    
+    
     func showMenu() {
-        
         self.containerView.layer.cornerRadius = 40
         let x = screen.width * 0.8
         let originalTransform = self.containerView.transform
@@ -65,17 +89,17 @@ class SideMenuController: UIViewController , UICollectionViewDelegate , UICollec
         }
     }
     
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        arryphotos.count
-    }
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        arryphotos[section].photos.count
+        return arryproducts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Homecollectione", for: indexPath) as! Homecollectione
-    cell.photos.image = arryphotos[indexPath.section].photos[indexPath.row]
+        let catgrys = arryproducts[indexPath.row]
+        cell.label.text = catgrys.title
+        cell.Descrbtione.text = catgrys.brand
+        let imgurl =  (catgrys.thumbnail)
+        cell.photos.downloaded(from: imgurl)
         return cell
     }
     
@@ -87,43 +111,17 @@ class SideMenuController: UIViewController , UICollectionViewDelegate , UICollec
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         return UIEdgeInsets(top: 20, left: 20, bottom:20, right: 20)
     }
-    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
-        let heder = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "photosCollectionReusableView", for: indexPath) as! photosCollectionReusableView
-        heder.hedertietl.text = arryphotos[indexPath.section].name
-        
-        
-        return heder
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+                print("user is hiding menu")
+                let calender = UIStoryboard(name: "SideMenu", bundle: nil).instantiateViewController(withIdentifier: "didselectView") as? didselectViewController
+                let catgrys = arryproducts[indexPath.row]
+                    calender?.arrycatgry = catgrys
+                self.present(calender!, animated: true)
     }
-    
-    
-    
-    
 }
 struct photo {
     let name : String
     let photos : [UIImage]
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//
-//func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
-//        return CGSize(width: collectionView.frame.width , height: 80)
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-//        return 1
-//    }
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-//        return 0.5
-//    }

@@ -8,7 +8,7 @@
 
 import Foundation
 
-// MARK: - Welcome
+// MARK: - Model Login
 struct loginmodel: Codable {
     let id: Int
     let username, email, firstName, lastName: String
